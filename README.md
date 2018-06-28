@@ -35,6 +35,7 @@ const encryptedMessage = AES.encrypt('message', 'test').toString();
 const bytes = AES.decrypt(encryptedMessage, 'test');
 //Convert decrypted string to Utf8
 const decryptedMessage = bytes.toString(CryptoTS.enc.Utf8);
+```
 
 Modular include:
 
