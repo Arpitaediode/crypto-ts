@@ -23,6 +23,19 @@ import { AES } from 'crypto-ts';
 const encryptedMessage = AES.encrypt('message', 'test').toString();
 ```
 
+### Angular usage
+
+```typescript
+import * as CryptoTS from 'crypto-ts';
+import { AES } from 'crypto-ts';
+
+//Encryption
+const encryptedMessage = AES.encrypt('message', 'test').toString();
+//Decryption
+const bytes = AES.decrypt(encryptedMessage, 'test');
+//Convert decrypted string to Utf8
+const decryptedMessage = bytes.toString(CryptoTS.enc.Utf8);
+
 Modular include:
 
 ```javascript
